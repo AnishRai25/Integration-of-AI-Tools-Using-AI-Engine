@@ -1,16 +1,63 @@
-# React + Vite
+# Integration of AI Tools Using AI Engine (IATAE)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Integration of AI Tools Using AI Engine (IATAE) is a Generative AI platform that enables users to compare responses from multiple Large Language Models (LLMs) through a unified interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The system allows users to submit a single prompt and receive responses from multiple AI models simultaneously, making it easier to evaluate accuracy, relevance, and performance.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Multi-Model Response Comparison
+* Real-Time AI Inference
+* Unified Prompt Interface
+* Parallel AI Processing
+* Chat History Management
+* Local AI Execution using Ollama
+* FastAPI Backend
+* React.js Frontend
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+
+* React.js
+* Vite
+* Axios
+
+### Backend
+
+* FastAPI
+* Python
+
+### AI Models
+
+* Phi
+* TinyLlama
+* Moondream
+* Ollama
+
+## Project Architecture
+
+User Prompt
+↓
+AI Engine
+↓
+Parallel Model Execution
+↓
+Phi | TinyLlama | Moondream
+↓
+Response Comparison Dashboard
+
+## Future Enhancements
+
+* RAG Integration
+* PDF Question Answering
+* Voice Input Support
+* User Authentication
+* Response Rating System
+
+## Author
+
+Anish Rai
+BE Computer Engineering
