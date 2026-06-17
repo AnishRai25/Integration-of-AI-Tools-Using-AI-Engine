@@ -1,0 +1,178 @@
+.model-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.model-card {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.model-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.4), 0 0 30px rgba(57, 255, 20, 0.15);
+  border-color: var(--neon-green);
+}
+
+.model-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.model-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 12px;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.model-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+.model-content {
+  padding: 16px;
+  flex: 1;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.placeholder-text {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.model-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 100%;
+}
+
+.mini-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Match Badge */
+.match-badge {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #39FF14;
+  background: rgba(57, 255, 20, 0.1);
+  padding: 4px 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(57, 255, 20, 0.3);
+  box-shadow: 0 0 5px rgba(57, 255, 20, 0.2);
+}
+
+/* Selected Card */
+.model-card.selected {
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 25px rgba(255, 255, 255, 0.15), inset 0 0 20px rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Footer & Button */
+.model-footer {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.solution-match-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: default;
+  border: 1px solid transparent;
+}
+
+.solution-match-info:hover {
+  background: rgba(57, 255, 20, 0.03);
+  border-color: rgba(57, 255, 20, 0.2);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.1) inset;
+}
+
+.solution-match-info:hover .match-value {
+  text-shadow: 0 0 12px rgba(57, 255, 20, 0.8), 0 0 20px rgba(57, 255, 20, 0.5);
+  transform: scale(1.03);
+}
+
+.match-label {
+  font-size: 0.65rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.match-value {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #39FF14;
+  text-shadow: 0 0 6px rgba(57, 255, 20, 0.3);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform-origin: left center;
+  display: inline-block;
+}
+
+.select-btn {
+  background: transparent;
+  color: #b0b0b0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.select-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--dynamic-color, #fff);
+  border-color: var(--dynamic-color, #fff);
+  box-shadow: 0 0 15px var(--dynamic-color), inset 0 0 10px rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+.select-btn.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: var(--dynamic-color, #fff);
+  box-shadow: 0 0 20px var(--dynamic-color), inset 0 0 15px rgba(255,255,255,0.2);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}

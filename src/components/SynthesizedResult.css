@@ -1,0 +1,74 @@
+.synthesized-container {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: 1px solid var(--neon-green);
+  box-shadow: 0 0 15px var(--neon-green-glow);
+  position: relative;
+  overflow: hidden;
+  animation: slideIn 0.5s ease;
+  transition: all 0.3s ease;
+}
+
+.synthesized-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.4), 0 0 30px rgba(57, 255, 20, 0.2);
+  border-color: #55ff33;
+}
+
+.synthesized-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--neon-green);
+  box-shadow: 0 0 10px var(--neon-green);
+}
+
+.synth-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(57, 255, 20, 0.05);
+  border-bottom: 1px solid rgba(57, 255, 20, 0.2);
+}
+
+.synth-icon {
+  margin-right: 12px;
+  color: var(--neon-green);
+}
+
+.synth-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.synth-content {
+  padding: 24px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+.synth-loading {
+  border-color: rgba(57, 255, 20, 0.4);
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+}
+
+.pulse-icon {
+  animation: pulseGlow 1.5s infinite;
+}
+
+.synth-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(57, 255, 20, 0.2);
+  border-top-color: var(--neon-green);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-top: 16px;
+}

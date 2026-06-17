@@ -1,0 +1,21 @@
+.cursor-star {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9000;
+  background: #fff; /* White core */
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--neon-green), 0 0 12px var(--neon-green), 0 0 20px var(--neon-green);
+  animation: starFloatFade 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes starFloatFade {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    /* Random drift logic assigned via JS vars, making them scatter elegantly */
+    transform: scale(0) translate(calc(var(--dir-x) * 40px), calc(var(--dir-y) * 40px));
+    opacity: 0;
+  }
+}
